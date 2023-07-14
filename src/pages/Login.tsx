@@ -3,8 +3,11 @@ import { buttonVariants } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/technet-logo-white.png';
 import { LoginForm } from '@/components/LoginForm';
+import { useAppDispatch } from '@/redux/hooks';
 
 export default function Login() {
+  // const dispatch = useAppDispatch();
+
   return (
     <>
       <div className="container relative hidden h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
@@ -26,7 +29,9 @@ export default function Login() {
             }}
           />
           <div className="relative z-20 flex items-center text-lg font-medium">
-            <img className="h-8" src={logo} alt="" />
+            <Link to="/">
+              <img className="h-8" src={logo} alt="" />
+            </Link>
           </div>
           <div className="relative z-20 mt-auto">
             <blockquote className="space-y-2"></blockquote>
